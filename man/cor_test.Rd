@@ -2,21 +2,26 @@
 % Please edit documentation in R/cor_test.R
 \name{cor_test}
 \alias{cor_test}
-\title{Recode}
+\title{cor_test}
 \usage{
-cor_test(data, cols)
+cor_test(data, cols, sig_test = "raw", digit = 3, ...)
 }
 \arguments{
 \item{data}{a dataframe}
 
-\item{cols}{vector or quos(). column(s) that need to be recoded}
+\item{cols}{vector or tidyselect syntax or helpers. column(s) that need to be recoded.}
+
+\item{sig_test}{adjusted or raw. Default as adjusted. See psych::corr.test to learn more.}
+
+\item{digit}{number of digits}
 }
 \value{
 
 }
 \description{
-Recode
+This function uses the psych::corr.test function to generated the correlation. One potential problem with the current version of the function is that if the correlation between the two item is too high (rounded as 1), then that cell will become blank. This is a very rare problem, and I have not yet figure out how to solve this.
 }
 \examples{
+cor_test(iris,1:4)
 
 }
