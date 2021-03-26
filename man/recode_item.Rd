@@ -2,21 +2,21 @@
 % Please edit documentation in R/recode_item.R
 \name{recode_item}
 \alias{recode_item}
-\title{Recode}
+\title{Recode items}
 \usage{
 recode_item(
   data,
   cols,
   code_from = NULL,
   code_to = NULL,
-  reverse_code = F,
-  code_as_NA = NULL
+  reverse_code = FALSE,
+  retain_code = "all"
 )
 }
 \arguments{
 \item{data}{a dataframe}
 
-\item{cols}{vector or quos(). column(s) that need to be recoded}
+\item{cols}{vector or tidyselect syntax or helpers. column(s) that need to be recoded}
 
 \item{code_from}{vector. the order must match with vector for code_to}
 
@@ -24,14 +24,16 @@ recode_item(
 
 \item{reverse_code}{logical. Default as F. If T, it will use psych::reverse_code}
 
-\item{code_as_NA}{vector of values should be coded as NA in the columns. Default as NULL.}
+\item{retain_code}{vector. the code to be retained. default is everything.}
 }
 \value{
 
 }
 \description{
-Recode
+Recode items
 }
 \examples{
+test_df = data.frame(test_col = 1:5)
+recode_item(test_df, cols = test_col, reverse_code = TRUE, retain_code = 1:4)
 
 }

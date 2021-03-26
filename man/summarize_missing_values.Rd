@@ -9,7 +9,7 @@ summarize_missing_values(data, cols, group = NULL, print = F)
 \arguments{
 \item{data}{dataframe}
 
-\item{cols}{vector or quos(). column(s) that need to be centered}
+\item{cols}{vector or tidyselect syntax or helpers. column(s) that need to be centered}
 
 \item{group}{character. pass to group_by}
 

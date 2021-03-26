@@ -9,7 +9,7 @@ listwise_deletion(data, cols)
 \arguments{
 \item{data}{dataframe}
 
-\item{cols}{vector or quos(). column(s) that need to be centered}
+\item{cols}{vector or tidyselect syntax or helpers. column(s) that need to be centered}
 }
 \value{
 return a dataframe with listwise deletion

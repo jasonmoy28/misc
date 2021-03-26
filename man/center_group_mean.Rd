@@ -9,7 +9,7 @@ center_group_mean(data, cols, group)
 \arguments{
 \item{data}{dataframe}
 
-\item{cols}{vector or quos(). column(s) that need to be centered}
+\item{cols}{vector or tidyselect syntax or helpers. column(s) that need to be centered}
 
 \item{group}{the grouping variable. If you need to pass multiple group variables, try to use quos(). Passing multiple group variables is not tested.}
 }

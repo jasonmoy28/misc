@@ -2,7 +2,7 @@
 #'
 #' Perform listwise deletion (the entire rows is disregarded if the row has one NA value)
 #' @param data dataframe
-#' @param cols vector or quos(). column(s) that need to be centered
+#' @param cols vector or tidyselect syntax or helpers. column(s) that need to be centered
 #'
 #' @return
 #' return a dataframe with listwise deletion
@@ -13,7 +13,8 @@
 #'
 
 listwise_deletion = function(data, cols) {
+  cols = ggplot2::enquo(cols)
   return_df = data %>%
-    dplyr::filter(dplyr::across(!!!cols, ~ !is.na(.)))
+    dplyr::filter(dplyr::across(!!cols, ~ !is.na(.)))
   return(return_df)
 }

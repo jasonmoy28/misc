@@ -9,7 +9,7 @@ composite_score(data, cols, composite_col_name = "composited_column")
 \arguments{
 \item{data}{dataframe}
 
-\item{cols}{vector or quos(). column(s) that need to be composite}
+\item{cols}{vector or tidyselect syntax or helpers. column(s) that need to be composite}
 
 \item{composite_col_name}{character. default as 'composited_column'. the column name of the composite column}
 }

@@ -17,4 +17,5 @@ Imports:
     tibble,
     magrittr,
     data.table,
-    rmarkdown
+    rmarkdown,
+    ggplot2
